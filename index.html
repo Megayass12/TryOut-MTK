@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Try Out Matematika — Kelas 6 SD</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="app">
+
+  <!-- ══════ HEADER ══════ -->
+  <div class="header">
+    <div class="header-icon">📝</div>
+    <div>
+      <h1>Try Out Matematika — Kelas 6 SD</h1>
+      <p>Persiapan Ujian Akhir / Kelulusan · Semua Materi Kelas 6</p>
+      <div class="header-meta">
+        <span class="meta-chip mc-blue">📊 40 Soal Pilihan Ganda</span>
+        <span class="meta-chip mc-green">✏️ 15 Soal Isian</span>
+        <span class="meta-chip mc-amber">⏱ 10 Topik</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ TABS ══════ -->
+  <div class="tab-bar">
+    <button class="tab active" onclick="goTab('pg', this)">Pilihan Ganda (40)</button>
+    <button class="tab"        onclick="goTab('isian', this)">Isian (15)</button>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SECTION: PILIHAN GANDA
+  ══════════════════════════════════════ -->
+  <div id="tab-pg" class="section active">
+
+    <!-- Dashboard -->
+    <div class="dashboard">
+      <div class="dash-top">
+        <div>
+          <div style="font-size:12px;color:var(--text3);font-weight:600;letter-spacing:.5px;margin-bottom:4px">SKOR PILIHAN GANDA</div>
+          <div style="display:flex;align-items:baseline;gap:8px">
+            <div class="dash-score-big" id="dash-score">0 / 40</div>
+            <div style="font-size:20px;font-weight:700;color:var(--text3)" id="dash-pct">0%</div>
+          </div>
+          <div style="font-size:12px;color:var(--text2);margin-top:3px" id="dash-done">0 dari 40 soal dikerjakan</div>
+        </div>
+        <div class="dash-actions">
+          <button class="btn-outline" onclick="resetPG()">Ulangi</button>
+        </div>
+      </div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="prog-fill" style="width:0%"></div>
+      </div>
+      <div class="topic-stats" id="topic-stats"></div>
+    </div>
+
+    <!-- Topik yang dicakup -->
+    <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1rem 1.25rem;margin-bottom:1rem;">
+      <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:.5rem">Topik yang Diujikan:</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;">
+        <span class="badge b-blue">Bilangan (5)</span>
+        <span class="badge b-purple">FPB & KPK (4)</span>
+        <span class="badge b-green">Pecahan (5)</span>
+        <span class="badge b-amber">Perbandingan (4)</span>
+        <span class="badge b-teal">Persen (3)</span>
+        <span class="badge b-coral">Geometri (4)</span>
+        <span class="badge b-sky">Bangun Ruang (5)</span>
+        <span class="badge b-green">Statistika (4)</span>
+        <span class="badge b-amber">Peluang (3)</span>
+        <span class="badge b-purple">Koordinat (3)</span>
+      </div>
+    </div>
+
+    <div id="pg-list"></div>
+
+  </div><!-- /tab-pg -->
+
+  <!-- ══════════════════════════════════════
+       SECTION: ISIAN
+  ══════════════════════════════════════ -->
+  <div id="tab-isian" class="section">
+
+    <div class="isian-score-bar">
+      <div>
+        <div class="isian-score-num" id="isian-score-num">0 / 0 (dari 15 soal)</div>
+        <div class="isian-score-lbl" style="font-size:12px;color:var(--text2)">Skor Soal Isian — Tekan Enter atau klik Cek Jawaban</div>
+      </div>
+      <button class="isian-reset" onclick="resetIsian()">Ulangi</button>
+    </div>
+
+    <!-- Topik isian -->
+    <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1rem 1.25rem;margin-bottom:1rem;">
+      <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:.5rem">Topik Soal Isian:</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;">
+        <span class="badge b-blue">Bilangan (1)</span>
+        <span class="badge b-purple">FPB & KPK (2)</span>
+        <span class="badge b-green">Pecahan (1)</span>
+        <span class="badge b-amber">Perbandingan & Skala (2)</span>
+        <span class="badge b-teal">Persen (2)</span>
+        <span class="badge b-coral">Geometri (1)</span>
+        <span class="badge b-sky">Bangun Ruang (2)</span>
+        <span class="badge b-green">Statistika (2)</span>
+        <span class="badge b-amber">Peluang (1)</span>
+        <span class="badge b-purple">Koordinat (1)</span>
+      </div>
+    </div>
+
+    <div id="isian-list"></div>
+
+  </div><!-- /tab-isian -->
+
+</div><!-- /app -->
+<script src="script.js"></script>
+</body>
+</html>
