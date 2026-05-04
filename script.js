@@ -337,6 +337,32 @@ const pgData = [
     ans: 1,
     why: 'Kolom tetap (sama = 2), baris berubah dari 1 ke 4 (+3). Bertambah ke atas = 3 langkah ke atas (vertikal).'
   },
+  /* ══════ K. BENTUK PECAHAN (Kisi-kisi 1) ══════ */
+  {
+    no:41, cat:'Pecahan', cc:'b-green',
+    q: 'Pecahan ⁶⁄₈ dapat dinyatakan dalam bentuk lain yang senilai, yaitu ...',
+    opts: ['¹⁄₄', '½', '¾', '²⁄₃'],
+    ans: 2,
+    why: '⁶⁄₈ disederhanakan: FPB dari 6 dan 8 = 2. 6÷2 = 3, 8÷2 = 4. Jadi ⁶⁄₈ = ¾.\nDapat juga diubah: desimal = 0,75 = 75% = ¾.'
+  },
+
+  /* ══════ L. CIRI BANGUN RUANG (Kisi-kisi 2) ══════ */
+  {
+    no:42, cat:'Bangun Ruang', cc:'b-sky',
+    q: 'Perhatikan ciri-ciri bangun ruang berikut:\n① Memiliki 1 titik puncak\n② Alasnya berbentuk lingkaran\n③ Memiliki 1 sisi lengkung dan 1 sisi datar\n④ Tidak memiliki rusuk\nBangun ruang yang dimaksud adalah ...',
+    opts: ['Limas segitiga', 'Tabung', 'Kerucut', 'Bola'],
+    ans: 2,
+    why: 'Kerucut memiliki: 1 titik puncak, alas berbentuk lingkaran, 1 sisi lengkung + 1 sisi datar (alas), dan tidak memiliki rusuk yang lurus.\nLimas: alas poligon, punya rusuk. Tabung: 2 sisi datar, tidak ada titik puncak. Bola: tidak punya sisi datar sama sekali.'
+  },
+
+  /* ══════ M. DEBIT (Kisi-kisi 3) ══════ */
+  {
+    no:43, cat:'Perbandingan', cc:'b-amber',
+    q: 'Sebuah kran mengalirkan air sebanyak 90 liter dalam 15 menit. Debit aliran air kran tersebut adalah ...',
+    opts: ['4 liter/menit', '5 liter/menit', '6 liter/menit', '9 liter/menit'],
+    ans: 2,
+    why: 'Debit = Volume ÷ Waktu = 90 liter ÷ 15 menit = 6 liter/menit.\nRumus debit: D = V/t, di mana V = volume cairan dan t = waktu yang diperlukan.'
+  },
 ];
 
 // ═══════════════════════════════════════════
